@@ -1,0 +1,100 @@
+body {
+    background-image: url(https://i.pinimg.com/originals/d0/39/f5/d039f5e94aacb1e272a1299e8e7d62b1.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    margin: 0; /* Remove default body margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure the body covers at least the full viewport height */
+    animation: gradient 10s ease infinite;
+}
+
+/* Add a wrapper to center the content */
+#center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#content {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#content:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px mediumblue;
+}
+
+#QR-content img {
+    border-radius: 10px;
+    width: 20rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+#QR-content img:hover {
+    transform: scale(1.1);
+}
+
+#title-container {
+    padding: 1rem 1rem 0 1rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#title-container:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+#title-container h2,
+#legend,
+a {
+    color: #fff;
+}
+
+#legend:hover,
+a:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#description-container {
+    padding: 0 2.5rem 0 2.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+#progressBar {
+    width: 100%;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}

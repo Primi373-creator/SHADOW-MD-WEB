@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8736240299050572"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/NpA3ZsJ.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles-QR.css">
+    <title>SHADOW-MD QR</title>
+    <script>
+        var timeleft = 20; // Changed to 20 seconds
+        var downloadTimer = setInterval(function () {
+            if (timeleft <= 0) {
+                clearInterval(downloadTimer);
+                document.getElementById("progressBar").remove();
+                document.getElementById("main").innerHTML = '<a href="javascript:history.go(0)" class="reload-link">QR Expired! Click to reload</a>';
+                document.getElementById("legend").innerHTML = "";
+            } else {
+                document.getElementById("legend").innerHTML = "Scan The QR Code Within " + timeleft + " seconds";
+            }
+            document.getElementById("progressBar").value = 20 - timeleft; // Adjusted to 20 seconds
+            timeleft -= 1;
+        }, 1000);
+    </script>
+</head>
+
+<body>
+    <div id="content">
+        <div id="QR-content">
+            <img id="qr-image" src="https://web-zu7g.onrender.com" alt="SHADOW-MD QR CODE">
+        </div>
+        <div id="title-container">
+            <h2 id="main" class="hoverable-text">SHADOW-MD QR</h2>
+            <p class="legend" id="legend">Scan The QR Code Within 20 seconds</p>
+        </div>
+        <div id="description-container">
+            <p id="semi" class="legend"></p>
+            <progress value="0" max="20" id="progressBar" class="clickable-loader" onclick="javascript:history.go(0);"></progress>
+        </div>
+        <a href="javascript:history.go(0)" class="reload-link">Click Here to Reload Page</a>
+    </div>
+</body>
+
+</html>
